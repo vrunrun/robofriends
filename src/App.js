@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import CardList from './CardList';
 import {robots} from './robots';	// non-default export, destructuring required
 import SearchBox from './SearchBox';
+import './App.css';
 
 // Class based component (State)
 class App extends Component {
@@ -30,7 +31,7 @@ class App extends Component {
 
 		return (
 			<div className="tc">
-				<h1>RoboFriends</h1>
+				<h1 className="f1">RoboFriends</h1>
 				{/* Pass event handler and to SearchBox*/}
 				<SearchBox searchChange={this.onSearchChange}/>
 				{/* Pass filtered list of robots to CardList*/}
