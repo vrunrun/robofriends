@@ -4,7 +4,7 @@ import './index.css';
 import * as serviceWorker from './serviceWorker';
 
 import 'tachyons';	// CSS file. OK to import once
-import App from './App'
+import App from './containers/App';
 
 ReactDOM.render(<App />, document.getElementById('root'));	// robots is an array of objects
 
