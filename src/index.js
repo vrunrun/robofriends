@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
-
 import 'tachyons';	// CSS file. OK to import once
 import App from './containers/App';
 
