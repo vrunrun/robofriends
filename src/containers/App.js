@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import CardList from '../components/CardList';
 import SearchBox from '../components/SearchBox';
-import Scroll from '../components/Scroll'
+import Scroll from '../components/Scroll';
+import ErrorBoundary from '../components/ErrorBoundary';
 import './App.css';
 
 // Class based component (State)
@@ -48,8 +49,10 @@ class App extends Component {
 				<SearchBox searchChange={this.onSearchChange}/>
 				{/* Make CardList scrollable */}
 				<Scroll>
-					{/* Pass filtered list of robots to CardList*/}
-					<CardList robots={filteredRobots}/>
+					<ErrorBoundary>
+						{/* Pass filtered list of robots to CardList*/}
+						<CardList robots={filteredRobots}/>
+					</ErrorBoundary>
 				</Scroll>
 			</div>
 		);
